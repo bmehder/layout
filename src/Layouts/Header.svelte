@@ -1,5 +1,5 @@
 <script>
-  // import Logo from "../UI/Logo.svelte";
+  import Logo from "../UI/Logo.svelte";
   export let sticky = false;
   export let uppercase = false;
   export let background = "darkorange";
@@ -9,7 +9,7 @@
 
 <header class:sticky style="background:{background};color:{color};">
   <nav>
-    <!-- <Logo /> -->
+    <Logo />
     <ul class:uppercase>
       <li><a style="color:{linkColor};" href="/">Home</a></li>
       <li><a style="color:{linkColor};" href="/">About</a></li>
@@ -34,7 +34,7 @@
   }
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;

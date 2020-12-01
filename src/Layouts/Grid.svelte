@@ -17,7 +17,7 @@
     display: grid;
     max-width: 960px;
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 600px) {
     .grid-wrap {
       display: block;
     }

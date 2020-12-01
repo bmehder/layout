@@ -1,130 +1,149 @@
 <script>
-  import Header from "./Header.svelte";
-  import Section from "./Section.svelte";
-  import Grid from "./Grid.svelte";
-  import Flex from "./Flex.svelte";
-  import Footer from "./Footer.svelte";
+  // Layout Components
+  import Header from "./Layouts/Header.svelte";
+  import Section from "./Layouts/Section.svelte";
+  import Grid from "./Layouts/Grid.svelte";
+  import Flex from "./Layouts/Flex.svelte";
+  import Footer from "./Layouts/Footer.svelte";
+
+  // UI Components
+  import Timeline from "./UI/Timeline.svelte";
+  import Tabs from "./UI/Tabs.svelte";
+  import FancyCard from "./UI/FancyCard.svelte";
+  import Form from "./UI/Form.svelte";
+  import Blockquote from "./UI/Blockquote.svelte";
+  import Hero from "./UI/Hero.svelte";
+  import Button from "./UI/Button.svelte";
+  import Fetcher from "./UI/Fetcher.svelte";
+  import Animation from "./UI/Animation.svelte";
+
+  // Data Stores
+  import { tennis } from "./Data/tennis.js";
+  import { tabData } from "./Data/tabData.js";
 </script>
 
 <div class="wrapper">
   <Header />
   <main>
-    <Section
-      background="linear-gradient(to bottom, blue, green)"
-      padding="2em 1em"
-      margin="2em 0">
-      <Flex align="center">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-      </Flex>
+    <Hero
+      background="https://source.unsplash.com/random/"
+      title="We're leaving now. Thanks for all the fish.">
+      <Button uppercase reflection shadow background="darkorange">
+        Make My Day
+      </Button>
+    </Hero>
+
+    <Section background="linear-gradient(to right, #b24592, #f15f79)">
+      <Timeline data={tennis} />
     </Section>
 
-    <Section boxed background="dodgerblue" padding="40px">
-      <Flex direction="row" align="end" justify="space-around">
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-      </Flex>
+    <Section background="dodgerblue">
+      <Tabs data={tabData} />
     </Section>
 
-    <Section boxed background="dodgerblue" padding="40px">
-      <Flex direction="row" align="center" justify="center">
-        <p>7</p>
-        <p>8</p>
-        <p>9</p>
-      </Flex>
-    </Section>
-
-    <Section boxed background="coral" padding="40px">
-      <Flex justify="space-between">
-        <p style="flex:1;">10</p>
-        <p style="flex:1;">11</p>
-      </Flex>
-    </Section>
-
-    <Section background="yellow" padding="40px">
-      <Grid columns="1fr 1fr 1fr 1fr" gap="40px" place="center">
-        <p style="width:100%;">12</p>
-        <p style="width:100%;">13</p>
-        <p style="width:100%;">14</p>
-      </Grid>
-    </Section>
-
-    <Section boxed background="magenta" padding="40px">
-      <Grid columns="1fr 1fr 1fr 1fr">
-        <p>15</p>
-        <p>16</p>
-        <p>17</p>
-        <Grid columns="1fr">
-          <p style="width: 100%;">18</p>
-          <!-- <p>19</p>
-          <p>20</p> -->
-        </Grid>
-      </Grid>
-    </Section>
-
-    <Section
-      background="url('https://source.unsplash.com/random/') center center/cover"
-      margin="2em auto"
-      padding="40px">
-      <Flex justify="center">
-        <p
-          style="background: none; text-shadow: 0 0 10px rgba(0,0,0,0.5);font-size:4em;text-align:center;padding:2em;">
-          Hello World!
+    <Section boxed background="white" padding="40px 20px">
+      <h3>Lorem Ipsum</h3>
+      <Grid columns="1fr 1fr" gap="3em">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          nulla ullam, sed dolor accusantium totam eius modi nobis quo id
+          repellendus nesciunt sint earum reprehenderit repellat non ea, labore
+          rerum nisi consequuntur exercitationem voluptas magni quibusdam illum?
+          Tempora distinctio sed veniam velit nihil molestias, animi aliquid
+          nobis ab dignissimos esse.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias,
+          dolore suscipit vero nulla incidunt fugit veritatis, ad laborum
+          eveniet saepe maiores a cum at hic ipsam ullam amet expedita. Totam
+          eligendi fugiat deserunt. Harum reprehenderit temporibus ad pariatur.
+          Ex dolorum eum possimus quis soluta dolore eius consectetur alias
+          voluptas nesciunt?
+        </p>
+      </Grid>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, dolore
+        suscipit vero nulla incidunt fugit veritatis, ad laborum eveniet saepe
+        maiores a cum at hic ipsam ullam amet expedita. Totam eligendi fugiat
+        deserunt. Harum reprehenderit temporibus ad pariatur. Ex dolorum eum
+        possimus quis soluta dolore eius consectetur alias voluptas nesciunt?
+      </p>
+      <Blockquote shadow>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, dolore
+        suscipit vero.
+      </Blockquote>
+    </Section>
+
+    <Section background="#f3f3f3">
+      <Flex justify="space-around" align="center">
+        <FancyCard ribbon />
+        <FancyCard raise fx />
       </Flex>
+      <FancyCard
+        metal
+        ribbon
+        blur
+        title="My Custom Title"
+        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, dolore
+        suscipit vero nulla incidunt fugit veritatis, ad laborum eveniet saepe
+        maiores a cum at hic ipsam ullam amet expedita. Totam eligendi fugiat
+        deserunt. Harum reprehenderit temporibus ad pariatur. Ex dolorum eum
+        possimus quis soluta dolore eius consectetur alias voluptas nesciunt?" />
+    </Section>
+
+    <Section background="#323232">
+      <Grid columns="1fr 1fr" gap="2em">
+        <FancyCard ribbon />
+        <FancyCard raise fx />
+      </Grid>
+      <FancyCard
+        ribbon
+        blur
+        title="My Custom Title"
+        content="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias, dolore
+        suscipit vero nulla incidunt fugit veritatis, ad laborum eveniet saepe
+        maiores a cum at hic ipsam ullam amet expedita. Totam eligendi fugiat
+        deserunt. Harum reprehenderit temporibus ad pariatur. Ex dolorum eum
+        possimus quis soluta dolore eius consectetur alias voluptas nesciunt?" />
     </Section>
 
     <Section
-      boxed
-      background="darkorange"
-      padding="80px 40px"
-      margin="2em auto">
-      <Grid
-        columns="1fr 4fr 1fr"
-        rows="minmax(200px, 400px) 1fr"
-        place="center"
-        gap="2em">
-        <p style="width:100%;height:100%;">21</p>
-        <p style="width:100%;height:100%;">22</p>
-        <p style="width:100%;height:100%;">23</p>
-        <p style="width:100%;height:100%;">X</p>
-        <p style="width:100%;height:100%;">Y</p>
-        <p style="width:100%;height:100%;">Z</p>
-      </Grid>
+      background="linear-gradient(to right, #005c97, #363795)"
+      padding="2em 0 0">
+      <Flex justify="center">
+        <Form
+          title="Send Us A Message"
+          titleColor="white"
+          buttonText="Submit Message"
+          buttonColor="darkorange" />
+      </Flex>
+    </Section>
+
+    <!-- <Section background="linear-gradient(to right, #005c97, #363795)">
+      <Fetcher />
+    </Section> -->
+
+    <Section
+      background="radial-gradient(
+      circle 60em,
+      transparent,
+      rgba(48, 122, 213, 0.8)
+    )">
+      <Animation />
     </Section>
   </main>
-  <Footer>Copyright 2021</Footer>
+  <Footer background="#323232">
+    &copy; 2021 Brad Mehder. All rights reserved.
+  </Footer>
 </div>
 
 <style>
   :global(body) {
-    background-color: blanchedalmond;
+    background-color: white;
   }
   .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
   }
-  /* Temp */
-  p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    background-color: gray;
-    color: white;
-  }
-  p:nth-child(1) {
-    background-color: red;
-  }
-  p:nth-child(2) {
-    background-color: green;
-  }
-  p:nth-child(3) {
-    background-color: blue;
-  }
-  /* End Temp */
 </style>
