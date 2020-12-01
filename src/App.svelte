@@ -56,12 +56,24 @@
         <p>15</p>
         <p>16</p>
         <p>17</p>
-        <Grid columns="1fr 1fr 1fr">
-          <p>18</p>
-          <p>19</p>
-          <p>20</p>
+        <Grid columns="1fr">
+          <p style="width: 100%;">18</p>
+          <!-- <p>19</p>
+          <p>20</p> -->
         </Grid>
       </Grid>
+    </Section>
+
+    <Section
+      background="url('https://source.unsplash.com/random/') center center/cover"
+      margin="2em auto"
+      padding="40px">
+      <Flex justify="center">
+        <p
+          style="background: none; text-shadow: 0 0 10px rgba(0,0,0,0.5);font-size:4em;text-align:center;padding:2em;">
+          Hello World!
+        </p>
+      </Flex>
     </Section>
 
     <Section
@@ -69,10 +81,17 @@
       background="darkorange"
       padding="80px 40px"
       margin="2em auto">
-      <Grid columns="1fr 4fr 1fr" place="center stretch" gap="2em">
-        <p style="width:100%;">21</p>
-        <p style="width:100%;">22</p>
-        <p style="width:100%;">23</p>
+      <Grid
+        columns="1fr 4fr 1fr"
+        rows="minmax(200px, 400px) 1fr"
+        place="center"
+        gap="2em">
+        <p style="width:100%;height:100%;">21</p>
+        <p style="width:100%;height:100%;">22</p>
+        <p style="width:100%;height:100%;">23</p>
+        <p style="width:100%;height:100%;">X</p>
+        <p style="width:100%;height:100%;">Y</p>
+        <p style="width:100%;height:100%;">Z</p>
       </Grid>
     </Section>
   </main>
