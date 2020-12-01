@@ -43,11 +43,24 @@
       </Flex>
     </Section>
 
-    <Section boxed background="yellow" padding="40px">
+    <Section background="yellow" padding="40px">
       <Grid columns="1fr 1fr 1fr 1fr">
         <p>12</p>
         <p>13</p>
         <p>14</p>
+      </Grid>
+    </Section>
+
+    <Section boxed background="magenta" padding="40px">
+      <Grid columns="1fr 1fr 1fr 2fr">
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <Grid columns="1fr 1fr 1fr">
+          <p>18</p>
+          <p>19</p>
+          <p>20</p>
+        </Grid>
       </Grid>
     </Section>
   </main>
