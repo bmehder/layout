@@ -1,16 +1,18 @@
 <script>
   export let columns = "1fr";
+  export let gap = "";
+  export let place = "";
 </script>
 
-<div class="grid-wrap" style="grid-template-columns:{columns};">
+<div
+  class="grid-wrap"
+  style="grid-template-columns:{columns};grid-gap:{gap};place-items:{place};">
   <slot />
 </div>
 
 <style>
   .grid-wrap {
     display: grid;
-    grid-gap: 2em;
-    place-items: center;
     max-width: 960px;
   }
   @media screen and (max-width: 480px) {

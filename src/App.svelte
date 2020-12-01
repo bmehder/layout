@@ -1,8 +1,8 @@
 <script>
-  import Grid from "./Grid.svelte";
-  import Flex from "./Flex.svelte";
   import Header from "./Header.svelte";
   import Section from "./Section.svelte";
+  import Grid from "./Grid.svelte";
+  import Flex from "./Flex.svelte";
   import Footer from "./Footer.svelte";
 </script>
 
@@ -44,10 +44,10 @@
     </Section>
 
     <Section background="yellow" padding="40px">
-      <Grid columns="1fr 1fr 1fr 1fr">
-        <p>12</p>
-        <p>13</p>
-        <p>14</p>
+      <Grid columns="1fr 1fr 1fr 1fr" gap="40px" place="start end">
+        <p style="width:100%;">12</p>
+        <p style="width:100%;">13</p>
+        <p style="width:100%;">14</p>
       </Grid>
     </Section>
 
@@ -61,6 +61,14 @@
           <p>19</p>
           <p>20</p>
         </Grid>
+      </Grid>
+    </Section>
+
+    <Section boxed background="darkorange" padding="40px" margin="2em auto">
+      <Grid columns="1fr 4fr 1fr" place="center stretch" gap="2em">
+        <p style="width:100%;">21</p>
+        <p style="width:100%;">22</p>
+        <p style="width:100%;">23</p>
       </Grid>
     </Section>
   </main>
