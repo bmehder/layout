@@ -44,7 +44,7 @@
     </Section>
 
     <Section boxed background="yellow" padding="40px">
-      <Grid columns="1fr 1fr 1fr fr">
+      <Grid columns="1fr 1fr 1fr 1fr">
         <p>12</p>
         <p>13</p>
         <p>14</p>
