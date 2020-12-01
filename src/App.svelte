@@ -44,7 +44,7 @@
     </Section>
 
     <Section background="yellow" padding="40px">
-      <Grid columns="1fr 1fr 1fr 1fr" gap="40px" place="start end">
+      <Grid columns="1fr 1fr 1fr 1fr" gap="40px" place="center">
         <p style="width:100%;">12</p>
         <p style="width:100%;">13</p>
         <p style="width:100%;">14</p>
@@ -52,7 +52,7 @@
     </Section>
 
     <Section boxed background="magenta" padding="40px">
-      <Grid columns="1fr 1fr 1fr 2fr">
+      <Grid columns="1fr 1fr 1fr 1fr">
         <p>15</p>
         <p>16</p>
         <p>17</p>
@@ -64,7 +64,11 @@
       </Grid>
     </Section>
 
-    <Section boxed background="darkorange" padding="40px" margin="2em auto">
+    <Section
+      boxed
+      background="darkorange"
+      padding="80px 40px"
+      margin="2em auto">
       <Grid columns="1fr 4fr 1fr" place="center stretch" gap="2em">
         <p style="width:100%;">21</p>
         <p style="width:100%;">22</p>
@@ -76,6 +80,9 @@
 </div>
 
 <style>
+  :global(body) {
+    background-color: blanchedalmond;
+  }
   .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
