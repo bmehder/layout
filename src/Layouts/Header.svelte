@@ -9,7 +9,7 @@
 
 <header class:sticky style="background:{background};color:{color};">
   <nav>
-    <Logo />
+    <Logo width="150px" />
     <ul class:uppercase>
       <li><a style="color:{linkColor};" href="/">Home</a></li>
       <li><a style="color:{linkColor};" href="/">About</a></li>

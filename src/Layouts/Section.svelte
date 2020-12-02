@@ -22,6 +22,6 @@
   .content-wrap {
     max-width: 960px;
     margin: auto;
-    padding: 2em;
+    /* padding: 2em; */
   }
 </style>

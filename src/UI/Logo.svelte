@@ -7,7 +7,7 @@
 <a style="width:{width};" id="logo" href="/">{@html logo}</a>
 
 <style>
-  nav #logo {
+  #logo {
     display: block;
     padding: 0;
     font-size: 2.5rem;

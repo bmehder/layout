@@ -16,6 +16,7 @@
   import Button from "./UI/Button.svelte";
   import Fetcher from "./UI/Fetcher.svelte";
   import Animation from "./UI/Animation.svelte";
+  import Gooey from "./UI/Gooey.svelte";
 
   // Data Stores
   import { tennis } from "./Data/tennis.js";
@@ -33,17 +34,19 @@
       </Button>
     </Hero>
 
-    <Section background="linear-gradient(to right, #b24592, #f15f79)">
+    <Section
+      padding="2em"
+      background="linear-gradient(to right, #b24592, #f15f79)">
       <Timeline data={tennis} />
     </Section>
 
-    <Section background="dodgerblue">
+    <Section padding="2em" background="dodgerblue">
       <Tabs data={tabData} />
     </Section>
 
-    <Section boxed background="white" padding="40px 20px">
+    <Section boxed background="white" padding="2em">
       <h3>Lorem Ipsum</h3>
-      <Grid columns="1fr 1fr" gap="3em">
+      <Grid columns="1fr 1fr" gap="2em">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
           nulla ullam, sed dolor accusantium totam eius modi nobis quo id
@@ -74,7 +77,7 @@
       </Blockquote>
     </Section>
 
-    <Section background="#f3f3f3">
+    <Section background="#f3f3f3" padding="2em">
       <Flex justify="space-around" align="center">
         <FancyCard ribbon />
         <FancyCard raise fx />
@@ -91,10 +94,10 @@
         possimus quis soluta dolore eius consectetur alias voluptas nesciunt?" />
     </Section>
 
-    <Section background="#323232">
+    <Section background="#323232" padding="2em">
       <Grid columns="1fr 1fr" gap="2em">
         <FancyCard ribbon />
-        <FancyCard raise fx />
+        <FancyCard raise ribbon fx />
       </Grid>
       <FancyCard
         ribbon
@@ -119,9 +122,15 @@
       </Flex>
     </Section>
 
-    <!-- <Section background="linear-gradient(to right, #005c97, #363795)">
+    <Section background="black" padding="4em 0">
+      <Gooey />
+    </Section>
+
+    <Section
+      padding="2em 0 4em"
+      background="linear-gradient(to right, #005c97, #363795)">
       <Fetcher />
-    </Section> -->
+    </Section>
 
     <Section
       background="radial-gradient(
